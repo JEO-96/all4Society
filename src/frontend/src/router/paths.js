@@ -7,7 +7,7 @@
  * }
  */
 export default [{
-    path: '/go',
+    path: '/',
     view: 'HelloWorld'
 },{
     path: '/test',
