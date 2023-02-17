@@ -48,11 +48,11 @@ public class MemberController {
     public Map<String, Object> joinPOST(@RequestBody MemberDto memberDto) {
         Map<String, Object> map = new HashMap<>();
         map.put("memberDto", memberDto);
-        System.out.println(memberDto);
+        System.out.println(memberDto.getMemberId());
         try {
-//        	Member member = Member.createMember(memberDto);
-//        	memberService.saveMember(member);
-//            System.out.println("==============저장됐니?");
+        	Member member = Member.createMember(memberDto);
+        	memberService.saveMember(member);
+            System.out.println("==============저장됐니?");
         }
         catch(Exception e) {
             map.put("status", -1);
